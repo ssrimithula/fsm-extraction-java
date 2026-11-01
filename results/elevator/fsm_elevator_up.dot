@@ -1,0 +1,24 @@
+digraph FSM {
+graph [label=<Elevator: unary abstraction, d = up (paper Fig. 10)<br/><font point-size="12">solid arrow = first time a state is reached, dashed red = returns to an already visited state</font>>, labelloc=t, fontsize=22, fontname=Helvetica, nodesep=0.45, ranksep=0.75, pad=0.3];
+node [shape=box, style="rounded,filled", fillcolor="#dbeafe", color="#1e3a8a", fontname=Helvetica, fontsize=14, margin="0.14,0.08"];
+edge [fontname=Helvetica, fontsize=12, color="#374151", arrowsize=0.8];
+START [shape=circle, label="START", fillcolor="#86efac", color="#166534", width=0.75, fixedsize=true, fontsize=12];
+"d=up | f=1" [label="d = up\nf = 1"];
+"d=up | f=2" [label="d = up\nf = 2"];
+"d=up | f=3" [label="d = up\nf = 3"];
+"d=up | f=4" [label="d = up\nf = 4"];
+"d=up | f=5" [label="d = up\nf = 5"];
+"d=up | f=6" [label="d = up\nf = 6"];
+"d=up | f=7" [label="d = up\nf = 7"];
+"d=up | f=8" [label="d = up\nf = 8"];
+"d=up | f=9" [label="d = up\nf = 9"];
+START -> "d=up | f=1";
+"d=up | f=1" -> "d=up | f=2" [label="f"];
+"d=up | f=2" -> "d=up | f=3" [label="f"];
+"d=up | f=3" -> "d=up | f=4" [label="f"];
+"d=up | f=4" -> "d=up | f=5" [label="f"];
+"d=up | f=5" -> "d=up | f=6" [label="f"];
+"d=up | f=6" -> "d=up | f=7" [label="f"];
+"d=up | f=7" -> "d=up | f=8" [label="f"];
+"d=up | f=8" -> "d=up | f=9" [label="f"];
+}

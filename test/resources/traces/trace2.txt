@@ -1,0 +1,7 @@
+INIT:x=0,y=0
+INCREMENT:x=1,y=0
+INCREMENT:x=2,y=1
+RESET:x=0,y=0
+INCREMENT:x=1,y=0
+INCREMENT:x=2,y=1
+FINAL:x=3,y=2

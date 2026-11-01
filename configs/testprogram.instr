@@ -1,0 +1,3 @@
+# Field Filter config for FSMAgent.
+# Format: ClassName:field1,field2,...
+TestProgram:x,y

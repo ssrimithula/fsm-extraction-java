@@ -1,0 +1,1 @@
+property[elevator]: 668 states checked, 0 violations -> HOLDS

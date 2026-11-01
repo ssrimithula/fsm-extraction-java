@@ -1,0 +1,4 @@
+build/
+target/
+lib/junit-platform-console-standalone-local.jar
+*.class

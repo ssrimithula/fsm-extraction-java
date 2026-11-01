@@ -1,0 +1,1 @@
+property[rw]: 460 states checked, 0 violations -> HOLDS

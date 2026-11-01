@@ -1,0 +1,5 @@
+overhead over 10 alternating runs per program (mean, sd of elapsed time printed by each program)
+tight loop (2M writes) without: 2 ms (sd 0)        with agent: 444 ms (sd 12)     slowdown: 221.80x
+DiningPhilosophers     without: 2185 ms (sd 62)    with agent: 2179 ms (sd 74)    slowdown: 1.00x
+ReadersWriters         without: 2316 ms (sd 221)   with agent: 2289 ms (sd 171)   slowdown: 0.99x
+ElevatorController     without: 1171 ms (sd 36)    with agent: 1203 ms (sd 35)    slowdown: 1.03x

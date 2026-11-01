@@ -1,0 +1,5 @@
+L1=LoopDemo.main([Ljava/lang/String;)V (loop at line 10)
+L2=LoopDemo.main([Ljava/lang/String;)V (loop at line 11)
+L3=LoopDemo.main([Ljava/lang/String;)V (loop at line 12)
+L4=LoopDemo.main([Ljava/lang/String;)V (loop at line 14)
+L5=LoopDemo.main([Ljava/lang/String;)V (loop at line 15)

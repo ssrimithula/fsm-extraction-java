@@ -1,0 +1,20 @@
+digraph FSM {
+graph [label=<Readers-Writers: reading = number of readers, writing = number of writers<br/><font point-size="12">solid arrow = first time a state is reached, dashed red = returns to an already visited state</font>>, labelloc=t, fontsize=22, fontname=Helvetica, nodesep=0.45, ranksep=0.75, pad=0.3];
+node [shape=box, style="rounded,filled", fillcolor="#dbeafe", color="#1e3a8a", fontname=Helvetica, fontsize=14, margin="0.14,0.08"];
+edge [fontname=Helvetica, fontsize=12, color="#374151", arrowsize=0.8];
+START [shape=circle, label="START", fillcolor="#86efac", color="#166534", width=0.75, fixedsize=true, fontsize=12];
+"reading=C0 | writing=C0" [label="reading = C0\nwriting = C0"];
+"reading=C0 | writing=C1" [label="reading = C0\nwriting = C1"];
+"reading=C1 | writing=C0" [label="reading = C1\nwriting = C0"];
+"reading=C2 | writing=C0" [label="reading = C2\nwriting = C0"];
+"reading=C3 | writing=C0" [label="reading = C3\nwriting = C0"];
+START -> "reading=C0 | writing=C0";
+"reading=C0 | writing=C0" -> "reading=C0 | writing=C1" [label="writer0, writer1"];
+"reading=C0 | writing=C1" -> "reading=C0 | writing=C0" [label="writer0, writer1", style=dashed, color="#dc2626", fontcolor="#dc2626"];
+"reading=C0 | writing=C0" -> "reading=C1 | writing=C0" [label="reader1, reader2, reader0"];
+"reading=C1 | writing=C0" -> "reading=C2 | writing=C0" [label="reader2, reader0, reader1"];
+"reading=C2 | writing=C0" -> "reading=C3 | writing=C0" [label="reader0, reader2, reader1"];
+"reading=C3 | writing=C0" -> "reading=C2 | writing=C0" [label="reader1, reader2, reader0", style=dashed, color="#dc2626", fontcolor="#dc2626"];
+"reading=C2 | writing=C0" -> "reading=C1 | writing=C0" [label="reader0, reader1, reader2", style=dashed, color="#dc2626", fontcolor="#dc2626"];
+"reading=C1 | writing=C0" -> "reading=C0 | writing=C0" [label="reader2, reader0, reader1", style=dashed, color="#dc2626", fontcolor="#dc2626"];
+}

@@ -1,0 +1,2 @@
+# Field Filter config for FSMAgent.
+ReadersWriters:reader0State,reader1State,reader2State,writer0State,writer1State

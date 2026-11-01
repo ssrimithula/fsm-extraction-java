@@ -1,0 +1,15 @@
+digraph FSM {
+graph [label=<TestProgram: states of x and y<br/><font point-size="12">solid arrow = first time a state is reached, dashed red = returns to an already visited state</font>>, labelloc=t, fontsize=22, fontname=Helvetica, nodesep=0.45, ranksep=0.75, pad=0.3];
+node [shape=box, style="rounded,filled", fillcolor="#dbeafe", color="#1e3a8a", fontname=Helvetica, fontsize=14, margin="0.14,0.08"];
+edge [fontname=Helvetica, fontsize=12, color="#374151", arrowsize=0.8];
+START [shape=circle, label="START", fillcolor="#86efac", color="#166534", width=0.75, fixedsize=true, fontsize=12];
+"x=ZERO | y=ZERO" [label="x = ZERO\ny = ZERO"];
+"x=POSITIVE | y=ZERO" [label="x = POSITIVE\ny = ZERO"];
+"x=POSITIVE | y=POSITIVE" [label="x = POSITIVE\ny = POSITIVE"];
+"x=ZERO | y=POSITIVE" [label="x = ZERO\ny = POSITIVE"];
+START -> "x=ZERO | y=ZERO";
+"x=ZERO | y=ZERO" -> "x=POSITIVE | y=ZERO" [label="x"];
+"x=POSITIVE | y=ZERO" -> "x=POSITIVE | y=POSITIVE" [label="y"];
+"x=POSITIVE | y=POSITIVE" -> "x=ZERO | y=POSITIVE" [label="x"];
+"x=ZERO | y=POSITIVE" -> "x=ZERO | y=ZERO" [label="y", style=dashed, color="#dc2626", fontcolor="#dc2626"];
+}

@@ -1,0 +1,9 @@
+INIT:x=0,y=0
+LOOP_START:x=0,y=0
+LOOP_BODY:x=1,y=1
+LOOP_BODY:x=2,y=2
+LOOP_BODY:x=3,y=3
+LOOP_BODY:x=4,y=4
+LOOP_BODY:x=5,y=5
+LOOP_END:x=5,y=5
+FINAL:x=0,y=0

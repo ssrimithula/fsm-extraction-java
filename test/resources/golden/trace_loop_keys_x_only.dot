@@ -1,0 +1,14 @@
+digraph FSM {
+label="Finite State Machine from Execution Trace";
+labelloc="t";
+fontsize=18;
+node [shape=ellipse, style=filled, color=lightblue];
+"START: x=?" [shape=doublecircle, color=green];
+"START: x=?" -> "x=ZERO";
+"x=ZERO" -> "x=ZERO" [label="LOOP_START", style=solid];
+"x=ZERO" -> "x=POSITIVE" [label="LOOP_BODY", style=solid];
+"x=POSITIVE" -> "x=POSITIVE" [label="LOOP_BODY", style=solid];
+"x=POSITIVE" -> "x=POSITIVE" [label="LOOP_BODY [LOOP]", style=dashed, color=red];
+"x=POSITIVE" -> "x=POSITIVE" [label="LOOP_END [LOOP]", style=dashed, color=red];
+"x=POSITIVE" -> "x=ZERO" [label="FINAL [LOOP]", style=dashed, color=red];
+}
